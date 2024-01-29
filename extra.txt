@@ -1,0 +1,86 @@
+# # add an item to a list in the category
+# def add_item_to_list(username, category, list_name):
+#     new_item = input("Enter the name of the new item: ")
+
+#     if username not in bucket_lists:
+#         bucket_lists[username] = {}
+
+#     if category not in bucket_lists[username]:
+#         bucket_lists[username][category] = {}
+
+#     if list_name not in bucket_lists[username][category]:
+#         bucket_lists[username][category][list_name] = []
+
+#     bucket_lists[username][category][list_name].append(new_item)
+#     print(f"New item '{new_item}' added to List '{list_name}'.")
+#     view_list_items(username, category, list_name)
+
+# function to add item to a list
+# def add_item(username):
+#     item = input("Enter the item to add to your bucket list: ")
+
+#     if username not in bucket_lists:
+#         bucket_lists[username] = []
+
+#     bucket_lists[username].append(item)
+#     print(f"Item '{item}' added to your bucket list!")
+
+# # function to delete item from a list
+# def delete_item(username):
+#     if username in bucket_lists and bucket_lists[username]:
+#         print("Bucket List Items:")
+#         for index, item in enumerate(bucket_lists[username], start=1):
+#             print(f"{index}. {item}")
+
+#         index_to_delete = int(input("Enter the number of the item to delete (0 to cancel): "))
+#         if 1 <= index_to_delete <= len(bucket_lists[username]):
+#             deleted_item = bucket_lists[username].pop(index_to_delete - 1)
+#             print(f"Item '{deleted_item}' deleted from your bucket list.")
+#         elif index_to_delete != 0:
+#             print("Invalid item number. No item deleted.")
+#     else:
+#         print("No items to delete.")
+
+# def add_completed_item(username, category, item):
+#     completed_items.setdefault(username, {}).setdefault(category, []).append(item)
+
+# def add_completed_item(username, category, item):
+#     completed_items.setdefault(username, {}).setdefault(category, []).append(item)
+
+    # print(f"Category '{category}':")
+
+    # if username in bucket_lists and category in bucket_lists[username]:
+    #     items = bucket_lists[username][category]
+
+    #     if not items:
+    #         add_item_prompt = input("There are no items currently in this list! Do you want to enter an item? (yes/no): ")
+    #         if add_item_prompt.lower() == "yes":
+    #             add_item_to_category(username, category)
+    #         else:
+    #             print("No items in this category.")
+    #     else:
+    #         exit_loop = False
+
+    #         while not exit_loop:
+    #             for index, item in enumerate(items, start=1):
+    #                 print(f"{index}. {item}")
+
+    #             option = int(input("Enter (1) to complete item, (2) to delete item, "
+    #                                "(3) to add item, (0) to go back, or (-1) to logout: "))
+
+    #             if option == 0:
+    #                 exit_loop = True
+    #             elif option == -1:
+    #                 print("Logging out. Goodbye!")
+    #                 exit_loop = True
+    #             elif option == 2:
+    #                 delete_item_from_category(username, category)
+    #             elif option == 3:
+    #                 add_item_to_category(username, category)
+    #             else:
+    #                 print("Invalid choice. Please try again.")
+    # else:
+    #     print("No items in this category.")
+    #     add_item_prompt = input("There are no items currently in this list! Do you want to enter an item? (yes/no): ")
+    #     if add_item_prompt.lower() == "yes":
+    #         add_item_to_category(username, category)
